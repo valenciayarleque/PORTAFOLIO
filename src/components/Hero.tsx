@@ -1,13 +1,13 @@
-import { ArrowUpRight, Code, Download, Sparkles } from 'lucide-react'
-import { CERTS, CFG } from '../data/portfolio'
-import { useScramble } from '../hooks/useScramble'
-import { asset } from '../utils/asset'
-import { CountUp } from './CountUp'
-import { ProfileInner } from './ProfileInner'
-import { SplitChars } from './SplitText'
+import { ArrowUpRight, Code, Download, Sparkles } from "lucide-react";
+import { CERTS, CFG } from "../data/portfolio";
+import { useScramble } from "../hooks/useScramble";
+import { asset } from "../utils/asset";
+import { CountUp } from "./CountUp";
+import { ProfileInner } from "./ProfileInner";
+import { SplitChars } from "./SplitText";
 
 export function Hero({ photo }: { photo: string | null }) {
-  const role = useScramble(CFG.roles)
+  const role = useScramble(CFG.roles);
 
   return (
     <section className="hero" id="inicio">
@@ -26,7 +26,12 @@ export function Hero({ photo }: { photo: string | null }) {
                 </small>
               </span>
               <span className="ln">
-                <span className="gl gt" id="h1b" data-t="Jhon VY" aria-hidden="true">
+                <span
+                  className="gl gt"
+                  id="h1b"
+                  data-t="Jhon VY"
+                  aria-hidden="true"
+                >
                   <SplitChars text="Jhon VY" offset={9} />
                 </span>
               </span>
@@ -38,13 +43,22 @@ export function Hero({ photo }: { photo: string | null }) {
             </p>
 
             <p className="lead">
-              <strong>Egresado de la carrera de Ingeniería de Software con IA.</strong> Combino el desarrollo Full Stack
-              moderno con la automatización inteligente para crear plataformas web rápidas y sistemas robustos a la
-              medida. Apasionado por la tecnología y enfocado en sumar valor en equipos orientados a resultados.
+              <strong>
+                Egresado de la carrera de Ingeniería de Software con IA.
+              </strong>{" "}
+              Combino el desarrollo Full Stack moderno con la automatización
+              inteligente para crear plataformas web rápidas y sistemas robustos
+              a la medida. Apasionado por la tecnología y enfocado en sumar
+              valor en equipos orientados a resultados.
             </p>
 
             <div className="btns">
-              <a className="btn p mg" href={asset('cv/CV-Jhon-VY.pdf')} download>
+              <a
+                className="btn p mg"
+                href={asset("cv/CV-Jhon-VY.pdf")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download size={18} aria-hidden="true" /> Descargar CV
               </a>
               <a className="btn mg" href="#contacto">
@@ -58,12 +72,26 @@ export function Hero({ photo }: { photo: string | null }) {
             <div className="soc">
               {CFG.github && (
                 <a href={CFG.github} target="_blank" rel="noopener noreferrer">
-                  GitHub <ArrowUpRight size={14} className="inline align-text-bottom" aria-hidden="true" />
+                  GitHub{" "}
+                  <ArrowUpRight
+                    size={14}
+                    className="inline align-text-bottom"
+                    aria-hidden="true"
+                  />
                 </a>
               )}
               {CFG.linkedin && (
-                <a href={CFG.linkedin} target="_blank" rel="noopener noreferrer">
-                  LinkedIn <ArrowUpRight size={14} className="inline align-text-bottom" aria-hidden="true" />
+                <a
+                  href={CFG.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn{" "}
+                  <ArrowUpRight
+                    size={14}
+                    className="inline align-text-bottom"
+                    aria-hidden="true"
+                  />
                 </a>
               )}
             </div>
@@ -72,11 +100,16 @@ export function Hero({ photo }: { photo: string | null }) {
           <div className="av">
             <svg className="orb" viewBox="0 0 200 200" aria-hidden="true">
               <defs>
-                <path id="orbp" d="M100,100 m-84,0 a84,84 0 1,1 168,0 a84,84 0 1,1 -168,0" />
+                <path
+                  id="orbp"
+                  d="M100,100 m-84,0 a84,84 0 1,1 168,0 a84,84 0 1,1 -168,0"
+                />
               </defs>
               <text>
                 <textPath href="#orbp" textLength={520} lengthAdjust="spacing">
-                  {'FULL STACK • IA APLICADA • AUTOMATIZACIÓN • SISTEMAS A MEDIDA • '}
+                  {
+                    "FULL STACK • IA APLICADA • AUTOMATIZACIÓN • SISTEMAS A MEDIDA • "
+                  }
                 </textPath>
               </text>
             </svg>
@@ -112,5 +145,5 @@ export function Hero({ photo }: { photo: string | null }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
