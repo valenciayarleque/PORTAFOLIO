@@ -56,8 +56,7 @@ export function Hero({ photo }: { photo: string | null }) {
               <a
                 className="btn p mg"
                 href={asset("cv/CV-Jhon-VY.pdf")}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="CV-Jhon-Valencia.pdf"
               >
                 <Download size={18} aria-hidden="true" /> Descargar CV
               </a>

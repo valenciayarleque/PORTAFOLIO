@@ -120,12 +120,11 @@ export function Header({ onToggleTheme }: Props) {
                 WhatsApp <ArrowUpRight size={18} aria-hidden="true" />
               </a>
               <a
-                className="mn-btn"
+                className="btn p mg"
                 href={asset("cv/CV-Jhon-VY.pdf")}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="CV-Jhon-Valencia.pdf"
               >
-                <Download size={18} aria-hidden="true" /> CV
+                <Download size={18} aria-hidden="true" /> Descargar CV
               </a>
             </div>
           </div>

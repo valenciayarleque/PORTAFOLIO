@@ -172,12 +172,11 @@ export function Contact({ photo }: { photo: string | null }) {
 
             <div className="qa">
               <a
-                className="btn mg"
+                className="btn p mg"
                 href={asset("cv/CV-Jhon-VY.pdf")}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="CV-Jhon-Valencia.pdf"
               >
-                <Download size={16} aria-hidden="true" /> Descargar CV
+                <Download size={18} aria-hidden="true" /> Descargar CV
               </a>
             </div>
           </aside>
